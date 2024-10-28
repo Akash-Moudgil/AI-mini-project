@@ -24,16 +24,15 @@ To make our model more robust, we’ll use data augmentation techniques to creat
     horizontal_flip=True,<br>
     fill_mode='nearest'<br>
 )*<br>
-
 *validation_datagen = ImageDataGenerator(rescale=1./255)*<br>
 
 **Model Architecture**<br>
-Our CNN model comprises convolutional and max-pooling layers, followed by fully connected layers. Here’s the model structure:<br><br>
+Our CNN model comprises convolutional and max-pooling layers, followed by fully connected layers. Here’s the model structure:<br>
 
-*Input layer: Accepts 150x150 RGB images.<br>
-Convolutional layers: We use four Conv2D layers to extract features, each followed by MaxPooling2D layers to reduce spatial dimensions.<br>
-Flatten layer: Converts the 2D output to a 1D array for the dense layers.<br>
-Dense layers: Two dense layers with the final layer using a softmax activation function to classify the images into five classes.*<br>
+Input layer: Accepts 150x150 RGB images.<br>
+Convolutional layers: We use four Conv2D layers to extract features, each followed by MaxPooling2D layers to reduce spatial dimensions.
+Flatten layer: Converts the 2D output to a 1D array for the dense layers.
+Dense layers: Two dense layers with the final layer using a softmax activation function to classify the images into five classes.
 
 **Compiling and Training the Model**<br>
 We use categorical cross-entropy as the loss function, Adam optimizer, and accuracy as the evaluation metric. The model is trained for 15 epochs. Here’s how we compiled and trained it:<br>
