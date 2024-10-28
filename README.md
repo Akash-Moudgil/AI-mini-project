@@ -6,7 +6,7 @@
 Fruit classification is a great application of computer vision, often used in agriculture and retail industries to sort and grade produce. In this post, we’ll build a Convolutional Neural Network (CNN) model using TensorFlow and Keras to classify different varieties of apples based on their images. Specifically, we’ll classify five apple types: **Fuji, Golden Delicious, Granny Smith, Lady, and Red Delicious.**
 
 **Dataset Preparation**<br>
-The dataset is organized into training and validation sets, each with folders for the five apple varieties. The training and validation paths are:<br><br>
+The dataset is organized into training and validation sets, each with folders for the five apple varieties. The training and validation paths are:<br>
 
 *Training directory: C:/Users/dell/Desktop/Minor Project/APPLE VARIETIES IMAGE DATASET/Train<br>
 Validation directory: C:/Users/dell/Desktop/Minor Project/APPLE VARIETIES IMAGE DATASET/Validation*<br>
