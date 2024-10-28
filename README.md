@@ -7,8 +7,8 @@ Fruit classification has become essential in agriculture and retail, helping aut
 
 #### 1. Dataset Preparation:-<br>
 To prepare our data, we organized it into separate folders for training and validation, each containing images for the five apple types. This structured format allows TensorFlow to efficiently load and preprocess images, maintaining consistency in data input.<br>
-**Training directory:** > *C:/Users/dell/Desktop/Minor Project/APPLE VARIETIES IMAGE DATASET/Train*<br>
-**Validation directory:** > *C:/Users/dell/Desktop/Minor Project/APPLE VARIETIES IMAGE DATASET/Validation*
+**Training directory:** *C:/Users/dell/Desktop/Minor Project/APPLE VARIETIES IMAGE DATASET/Train*<br>
+**Validation directory:** *C:/Users/dell/Desktop/Minor Project/APPLE VARIETIES IMAGE DATASET/Validation*<br>
 Each folder within these directories corresponds to a unique apple variety, making it easier for the CNN model to map image features to specific labels during training.
 
 #### Data Augmentation:-<br>
