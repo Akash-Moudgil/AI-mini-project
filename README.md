@@ -12,7 +12,7 @@ The dataset is organized into training and validation sets, each with folders fo
 Validation directory: C:/Users/dell/Desktop/Minor Project/APPLE VARIETIES IMAGE DATASET/Validation*
 
 ### Data Augmentation:-<br>
-To make our model more robust, we’ll use data augmentation techniques to create modified versions of our images. This includes random rotations, width/height shifts, shearing, zooming, and horizontal flips. Here’s how we set it up:<br><br>
+To make our model more robust, we’ll use data augmentation techniques to create modified versions of our images. This includes random rotations, width/height shifts, shearing, zooming, and horizontal flips. Here’s how we set it up:
 
 *train_datagen = ImageDataGenerator(
     rescale=1./255,
