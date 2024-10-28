@@ -8,21 +8,21 @@ Fruit classification is a great application of computer vision, often used in ag
 ### Dataset Preparation:-<br>
 The dataset is organized into training and validation sets, each with folders for the five apple varieties. The training and validation paths are:
 
-*Training directory: C:/Users/dell/Desktop/Minor Project/APPLE VARIETIES IMAGE DATASET/Train
+*Training directory: C:/Users/dell/Desktop/Minor Project/APPLE VARIETIES IMAGE DATASET/Train<br>
 Validation directory: C:/Users/dell/Desktop/Minor Project/APPLE VARIETIES IMAGE DATASET/Validation*
 
 ### Data Augmentation:-<br>
 To make our model more robust, we’ll use data augmentation techniques to create modified versions of our images. This includes random rotations, width/height shifts, shearing, zooming, and horizontal flips. Here’s how we set it up:
 
-*train_datagen = ImageDataGenerator(
-    rescale=1./255,
-    rotation_range=40,
-    width_shift_range=0.2,
-    height_shift_range=0.2,
-    shear_range=0.2,
-    zoom_range=0.2,
-    horizontal_flip=True,
-    fill_mode='nearest'
+*train_datagen = ImageDataGenerator(<br>
+    rescale=1./255,<br>
+    rotation_range=40,<br>
+    width_shift_range=0.2,<br>
+    height_shift_range=0.2,<br>
+    shear_range=0.2,<br>
+    zoom_range=0.2,<br>
+    horizontal_flip=True,<br>
+    fill_mode='nearest'<br>
 )*
 *validation_datagen = ImageDataGenerator(rescale=1./255)*
 
