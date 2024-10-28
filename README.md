@@ -23,9 +23,9 @@ To make our model more robust, we’ll use data augmentation techniques to creat
     zoom_range=0.2,<br>
     horizontal_flip=True,<br>
     fill_mode='nearest'<br>
-)<br><br>
+)*<br>
 
-validation_datagen = ImageDataGenerator(rescale=1./255)*<br>
+*validation_datagen = ImageDataGenerator(rescale=1./255)*<br>
 
 **Model Architecture**<br>
 Our CNN model comprises convolutional and max-pooling layers, followed by fully connected layers. Here’s the model structure:<br><br>
@@ -36,13 +36,13 @@ Flatten layer: Converts the 2D output to a 1D array for the dense layers.<br>
 Dense layers: Two dense layers with the final layer using a softmax activation function to classify the images into five classes.*<br>
 
 **Compiling and Training the Model**<br>
-We use categorical cross-entropy as the loss function, Adam optimizer, and accuracy as the evaluation metric. The model is trained for 15 epochs. Here’s how we compiled and trained it:<br><br>
+We use categorical cross-entropy as the loss function, Adam optimizer, and accuracy as the evaluation metric. The model is trained for 15 epochs. Here’s how we compiled and trained it:<br>
 
 *model.compile<br>
     loss='categorical_crossentropy',<br>
     optimizer='adam',<br>
     metrics=['accuracy']<br>
-)<br><br>
+)<br>
 
 history = model.fit(<br>
     train_generator,<br>
@@ -53,13 +53,13 @@ history = model.fit(<br>
 )*<br>
 
 **Evaluating the Model**<br>
-After training, we evaluate the model’s accuracy on the validation dataset:<br><br>
+After training, we evaluate the model’s accuracy on the validation dataset:<br>
 
 *test_loss, test_acc = model.evaluate(validation_generator, steps=validation_generator.samples // validation_generator.batch_size)<br>
-print(f"Test accuracy: {test_acc}")*<br><br>
+print(f"Test accuracy: {test_acc}")*<br>
 
 **Making Predictions**<br>
-To test a new image, we preprocess it similarly and pass it to the model to get a prediction.<br><br>
+To test a new image, we preprocess it similarly and pass it to the model to get a prediction.<br>
 
 *img = load_img(image_path, target_size=(150, 150))<br>
 img_array = img_to_array(img)<br>
