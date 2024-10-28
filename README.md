@@ -11,11 +11,24 @@ To prepare our data, we organized it into separate folders for training and vali
 **Validation directory:** *C:/Users/dell/Desktop/Minor Project/APPLE VARIETIES IMAGE DATASET/Validation*<br>
 Each folder within these directories corresponds to a unique apple variety, making it easier for the CNN model to map image features to specific labels during training.
 
-#### Data Augmentation:-<br>
+#### 2. Data Augmentation:-<br>
 To enhance our model’s ability to generalize, we apply data augmentation to artificially expand our training dataset. Data augmentation generates varied transformations of each image, reducing overfitting and helping the model learn more robust features. Key transformations include:
 
-Rotation: Randomly rotates images up to 40 degrees to simulate different viewing angles.
-Width and Height Shifts: Shifts images along the x and y axes by 20%, adding positional variance.
-Shear Transformation: Introduces a shearing effect, altering the image’s shape slightly.
-Zooming: Randomly zooms in by 20% to simulate closer viewpoints.
-Horizontal Flip: Flips images horizontally to simulate images from both left and right views.
+**Rotation:** Randomly rotates images up to 40 degrees to simulate different viewing angles.<br>
+**Width and Height Shifts:** Shifts images along the x and y axes by 20%, adding positional variance.<br>
+**Shear Transformation:** Introduces a shearing effect, altering the image’s shape slightly.<br>
+**Zooming:** Randomly zooms in by 20% to simulate closer viewpoints.<br>
+**Horizontal Flip:** Flips images horizontally to simulate images from both left and right views.<br>
+
+*train_datagen = ImageDataGenerator(
+    rescale=1./255,               # Rescale pixel values from [0, 255] to [0, 1]
+    rotation_range=40,             # Randomly rotate images by up to 40 degrees
+    width_shift_range=0.2,         # Shift images horizontally by up to 20%
+    height_shift_range=0.2,        # Shift images vertically by up to 20%
+    shear_range=0.2,               # Apply shear transformations
+    zoom_range=0.2,                # Apply zoom transformations
+    horizontal_flip=True,          # Flip images horizontally
+    fill_mode='nearest'            # Fill in missing pixels after transformation
+)*
+
+*validation_datagen = ImageDataGenerator(rescale=1./255)*
