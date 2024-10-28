@@ -1,7 +1,8 @@
-# Classifying Apple Varieties with Deep Learning
+# Classifying Apple Varieties
 
-Classifying Apple Varieties with Deep Learning: A Step-by-Step Guide
-Introduction
+##Classifying Apple Varieties with Deep Learning: A Step-by-Step Guide
+
+##Introduction
 Fruit classification is a great application of computer vision, often used in agriculture and retail industries to sort and grade produce. In this post, we’ll build a Convolutional Neural Network (CNN) model using TensorFlow and Keras to classify different varieties of apples based on their images. Specifically, we’ll classify five apple types: Fuji, Golden Delicious, Granny Smith, Lady, and Red Delicious.
 
 Dataset Preparation
